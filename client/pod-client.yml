@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-client
+spec:
+  containers:
+    - name: ckient-pod
+      image: fatmafcis/e-website-server
+      ports:
+        - containerPort: 5000

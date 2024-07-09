@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-server
+spec:
+  containers:
+    - name: server-pod
+      image: fatmafcis/e-website-server
+      ports:
+        - containerPort: 5000

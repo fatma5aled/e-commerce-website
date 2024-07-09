@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: e-website
+  template:
+    metadata:
+      labels:
+        app: e-website
+    spec:
+      containers:
+        - name: e-website
+          image: fatmafcis/e-website-server
+          ports:
+            - containerPort: 5000
